@@ -34,6 +34,7 @@ class HermesClientTest extends TestCase
             'params' => [
                 'user_name' => 'User Name',
                 'user_temp_password' => 'tmp',
+                'change_password_at_next_login' => false,
             ],
             'id' => '9d6d7208-2a7a-4b07-8609-2bcdcdfdd8f5',
             'updated_at' => '2024-11-06T22:58:21.000000Z',

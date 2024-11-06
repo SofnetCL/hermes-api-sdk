@@ -18,7 +18,7 @@ class Admin
     /**
      * @return Email
      */
-    public function sendWelcomeUserMail(string $email, string $userName, string $tempPassword): Email
+    public function sendWelcomeUserMail(string $email, string $userName, string $password, bool $changePasswordAtNextLogin = false): Email
     {
         $email = $this->httpApiClient->post('emails', [
             'service' => self::SERVICE,
@@ -26,7 +26,8 @@ class Admin
             'destination' => $email,
             'params' => [
                 'user_name' => $userName,
-                'user_temp_password' => $tempPassword,
+                'user_temp_password' => $password,
+                'change_password_at_next_login' => $changePasswordAtNextLogin,
             ],
         ]);
 
