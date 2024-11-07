@@ -26,7 +26,7 @@ class Admin
             'destination' => $email,
             'params' => [
                 'user_name' => $userName,
-                'user_temp_password' => $password,
+                'user_password' => $password,
                 'change_password_at_next_login' => $changePasswordAtNextLogin,
             ],
         ]);
